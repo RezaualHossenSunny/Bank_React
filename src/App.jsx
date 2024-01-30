@@ -22,10 +22,10 @@ function App() {
   return (
     <>
      <Navbar></Navbar>
-     <Container>
-     <Grid container spacing={5}>
+     <Container maxWidth='xl' xs={{ marginTop: 4 }}>
+     <Grid container spacing={5} alignItems='center'>
    
-   <Grid item md={6}>
+   <Grid item xs={12} md={6}>
    
    
    <Slectslider data={data} setData={setData}/>
@@ -33,7 +33,7 @@ function App() {
    </Grid>
    
    
-   <Grid item  md={6}> 
+   <Grid item xs={12} md={6}> 
    
    <Resulat  data={data} setData={setData} />
    </Grid>
