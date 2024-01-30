@@ -16,6 +16,12 @@ const Slidercomon = ({ defaultValue, min, max, amount, label, unit }) => {
       aria-label="Default"
       valueLabelDisplay="auto"
     />
+<Stack direction='row' justifyContent='space-between'>
+  <Typography variant="caption" color='text.secondary'>{unit} {min}</Typography>
+  <Typography variant="caption" color='text.secondary'>{unit} {max}</Typography>
+</Stack>
+
+
 </Stack>
   );
 };
