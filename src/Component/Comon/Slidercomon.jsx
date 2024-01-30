@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "@mui/material/Slider";
 import { Stack, Typography } from "@mui/material";
-const Slidercomon = ({ defaultValue, min, max, amount, label, unit }) => {
+const Slidercomon = ({ defaultValue, min, max, amount, label, unit ,steps,value ,onchange}) => {
   return (
 <Stack my={1.5}>
 <Stack gap={1}>
@@ -15,6 +15,10 @@ const Slidercomon = ({ defaultValue, min, max, amount, label, unit }) => {
       defaultValue={defaultValue}
       aria-label="Default"
       valueLabelDisplay="auto"
+      value={value}
+      onChange={onchange}
+      marks
+      step={steps}
     />
 <Stack direction='row' justifyContent='space-between'>
   <Typography variant="caption" color='text.secondary'>{unit} {min}</Typography>
