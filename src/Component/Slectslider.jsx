@@ -1,19 +1,23 @@
 import React from "react";
 import Slidercomon from "./Comon/Slidercomon";
 
-const Slectslider = () => {
+const Slectslider = ({data,setData}) => {
   const bank_limit =10000;
+  console.log(data);
   return (
     <div>
       <Slidercomon
-        defaultValue={3000}
+        defaultValue={data.homevalu}
         min={1000}
         max={bank_limit}
-        amount={3500}
+        value={data.homevalu}
+        amount={data.homevalu}
         steps={100}
         unit="$"
         label={"Home Value"}
-        onchange={(e) => console.log(e.target.value)}
+        onchange={(e,value) => setData({
+  homevalu:value
+        })}
       />
 
       <Slidercomon
