@@ -29,7 +29,7 @@ function App() {
    
    
    <Slectslider data={data} setData={setData}/>
-   <Tennure/>
+   <Tennure data={data} setData={setData}/>
    </Grid>
    
    
