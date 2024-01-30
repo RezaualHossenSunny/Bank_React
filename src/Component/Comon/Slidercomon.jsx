@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Slider from '@mui/material/Slider';
 const Slidercomon = () => {
   return (
-    <div>Slidercomon</div>
+    <Slider disabled defaultValue={30} aria-label="Disabled slider" />
   )
 }
 

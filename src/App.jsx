@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material"
+import { Container, Grid } from "@mui/material"
 import Navbar from "./Component/Navbar"
 import Resulat from "./Component/Resulat"
 
@@ -14,19 +14,23 @@ function App() {
   return (
     <>
      <Navbar></Navbar>
+     <Container>
      <Grid container spacing={5}>
-<Grid item>
-
-<Tennure/>
-<Slectslider/>
-</Grid>
-
-
-<Grid item> 
-
-<Resulat/>
-</Grid>
-     </Grid>
+   
+   <Grid item md={6}>
+   
+   
+   <Slectslider/>
+   <Tennure/>
+   </Grid>
+   
+   
+   <Grid item  md={6}> 
+   
+   <Resulat/>
+   </Grid>
+        </Grid>
+     </Container>
     </>
   )
 }

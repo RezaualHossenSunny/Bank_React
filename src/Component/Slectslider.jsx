@@ -1,8 +1,11 @@
 import React from 'react'
+import Slidercomon from './Comon/Slidercomon'
 
 const Slectslider = () => {
   return (
-    <div>Slectslider</div>
+    <div>
+        <Slidercomon/>
+    </div>
   )
 }
 
