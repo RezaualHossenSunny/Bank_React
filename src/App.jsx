@@ -35,7 +35,7 @@ function App() {
    
    <Grid item  md={6}> 
    
-   <Resulat/>
+   <Resulat  data={data} setData={setData} />
    </Grid>
         </Grid>
      </Container>
