@@ -16,41 +16,57 @@ const Slectslider = ({data,setData}) => {
         unit="$"
         label={"Home Value"}
         onchange={(e,value) => setData({
-  homevalu:value
+          ...data,homevalu:value,
+          doenpayment: value  * 0.2,
+          loanamount: value  * 0.8,
         })}
       />
 
       <Slidercomon
-        defaultValue={3000}
-        min={1000}
-        max={10000}
-        amount={3500}
+        defaultValue={data.doenpayment}
+        min={0}
+        max={data.homevalu}
+        amount={data.doenpayment}
+        value={data.doenpayment}
         steps={100}
         unit="$"
         label={"Down Pyment"}
-        onchange={(e) => console.log(e.target.value)}
+        onchange={(e,value) => setData({
+          ...data,
+          doenpayment:value,
+          loanamount: data.homevalu-value
+        })}
       />
 
       <Slidercomon
-        defaultValue={3000}
-        min={1000}
-        max={10000}
-        amount={3500}
+        defaultValue={data.loanamount}
+        min={0}
+        max={data.homevalu}
+        amount={data.loanamount}
+        value={data.loanamount}
         steps={100}
         unit="$"
         label={"Loan Amount"}
-        onchange={(e) => console.log(e.target.value)}
+        onchange={(e,value) => setData({
+          ...data,
+          loanamount:value,
+          doenpayment: data.homevalu -value,
+        })}
       />
 
       <Slidercomon
-        defaultValue={2}
+        defaultValue={data.interrest}
         min={2}
         max={18}
-        amount={2}
+        amount={data.interrest}
+        value={data.interrest}
         steps={0.5}
         unit="%"
         label={"Interrest Rate"}
-        onchange={(e) => console.log(e.target.value)}
+        onchange={(e,value) => setData({
+           ...data,
+           interrest:value
+        })}
       />
     </div>
   );
